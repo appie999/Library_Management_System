@@ -21,7 +21,18 @@ public class Book {
 
 
     }
+    void afficher()
+    {
+        System.out.println("le titre et :" + titre);
+        System.out.println("l'auteur et :" + auteur);
+        System.out.println("l'ISBN et : " + ISBN);
+        System.out.println("la disponibility et : " + disponibilité);
+    }
 
+    void modifier(){
+
+
+    }
 
 
 }
