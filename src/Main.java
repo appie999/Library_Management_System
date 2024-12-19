@@ -24,9 +24,11 @@ public class Main {
                 case 1:
                     System.out.print("Enter ISBN: ");
                     String isbn = sc.next();
-                    System.out.print("Enter Title: ");
-                    String title = sc.next();
                     sc.nextLine();
+
+                    System.out.print("Enter Title: ");
+                    String title = sc.nextLine();
+
                     System.out.print("Enter Author: ");
                     String author = sc.nextLine();
 
@@ -53,6 +55,9 @@ public class Main {
                     library.displayBooks();
                     break;
 
+                case 3:
+                    library.search();
+                    break;
 
                 case 0:
                     System.out.println("Exiting... Goodbye!");
