@@ -1,38 +1,53 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Book {
+    String title, author, isbn;
+    boolean isAvailable;
 
-    String titre,auteur,ISBN ;
-    boolean disponibilité;
-    ArrayList<String> books = new ArrayList<>();
-
-    void add(){
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("entrez le titre du livre :");
-         titre = scanner.nextLine();
-        System.out.print("entrez l'auteur du livre :");
-         auteur = scanner.nextLine();
-        System.out.print("entrez l'ISBN du livre :");
-         ISBN = scanner.nextLine();
-        System.out.print("ce livre est-il disponible ?");
-         disponibilité = scanner.nextBoolean();
-
-
-    }
-    void afficher()
-    {
-        System.out.println("le titre et :" + titre);
-        System.out.println("l'auteur et :" + auteur);
-        System.out.println("l'ISBN et : " + ISBN);
-        System.out.println("la disponibility et : " + disponibilité);
+    public Book(String title, String author, String isbn, boolean isAvailable) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.isAvailable = isAvailable;
     }
 
-    void modifier(){
-
-
+    public String getTitle() {
+        return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Title='" + title + '\'' +
+                        ", Author='" + author + '\'' +
+                        ", ISBN='" + isbn + '\'' +
+                        ", Available=" + isAvailable
+                ;
+    }
 }
