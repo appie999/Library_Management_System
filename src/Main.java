@@ -16,55 +16,66 @@ public class Main {
             System.out.println("4: Modifier un livre ");
             System.out.println("5: Supprimer un livre");
             System.out.println("0: Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print("Entrez votre choix: ");
             choice = sc.nextInt();
 
             switch (choice) {
 
                 case 1:
-                    System.out.print("Enter ISBN: ");
+                    System.out.print("Entrez l'ISBN du livre: ");
                     String isbn = sc.next();
                     sc.nextLine();
 
-                    System.out.print("Enter Title: ");
+                    System.out.print("Entrez le Title du livre: ");
                     String title = sc.nextLine();
 
-                    System.out.print("Enter Author: ");
+                    System.out.print("Enter l'auteur du livre: ");
                     String author = sc.nextLine();
 
                     boolean isAvailable = false;
                     while (true) {
-                        System.out.print("Is Available (true/false): ");
+                        System.out.print("Est disponible (true/false): ");
                         if (sc.hasNextBoolean()) {
                             isAvailable = sc.nextBoolean();
                             break;
                         } else {
-                            System.out.println("Invalid input, please enter 'true' or 'false'.");
+                            System.out.println("Entrée non valide, veuillez saisir 'true' ou 'false'.");
                             sc.next();
                         }
                     }
 
-                    library.addBook(new Book(title, author, isbn, isAvailable));
-                    System.out.println("Book added successfully!");
+                    library.ajouterLivre(new Book(title, author, isbn, isAvailable));
+                    System.out.println("Livre ajouté avec succès !");
                     break;
 
 
 
                 case 2:
-                    System.out.println("Books in Library:");
-                    library.displayBooks();
+                    System.out.println("\nLivre dans la bibliothèque:\n");
+                    library.afficherLivres();
                     break;
 
                 case 3:
-                    library.search();
+                    library.recherche();
                     break;
 
+                case 4:
+
+
+                    library.mise_A_jour();
+                    break;
+
+                case 5:
+                    System.out.print("Entrez l'ISBN du livre à supprimer: ");
+                    isbn = sc.next();
+                    library.supprimer(isbn);
+                    break;
                 case 0:
-                    System.out.println("Exiting... Goodbye!");
+                    System.out.println("Sortie... Au revoir !");
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Choix invalide. Veuillez réessayer.");
             }
         } while (choice != 0);
     }

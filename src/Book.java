@@ -1,28 +1,28 @@
 public class Book {
-    String title, author, isbn;
-    boolean isAvailable;
+    String titre, auteur, isbn;
+    boolean Disponible;
 
-    public Book(String title, String author, String isbn, boolean isAvailable) {
-        this.title = title;
-        this.author = author;
+    public Book(String titre, String auteur, String isbn, boolean Disponible) {
+        this.titre = titre;
+        this.auteur = auteur;
         this.isbn = isbn;
-        this.isAvailable = isAvailable;
+        this.Disponible = Disponible;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTitre() {
+        return titre;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuteur() {
+        return auteur;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
     }
 
     public String getIsbn() {
@@ -33,21 +33,21 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    public boolean Disponible() {
+        return Disponible;
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
+        Disponible = available;
     }
 
     @Override
     public String toString() {
         return
-                "Title='" + title + '\'' +
-                        ", Author='" + author + '\'' +
-                        ", ISBN='" + isbn + '\'' +
-                        ", Available=" + isAvailable
+                 "~~ le titre de livre et :" + titre + '\n' +
+                 "~~ L'auteur de livre te :" + auteur + '\n' +
+                 "~~ L'ISBN de livre et :" + isbn + '\n' +
+                 "~~ est-il disponible: " + Disponible
                 ;
     }
 }
