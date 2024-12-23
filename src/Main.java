@@ -5,7 +5,7 @@ public class Main {
         Library library = new Library();
         Scanner sc = new Scanner(System.in);
 
-        int choice;
+        String choice;
 
         do {
             System.out.println("\n--------Library_Management_System--------\n");
@@ -17,11 +17,11 @@ public class Main {
             System.out.println("5: Supprimer un livre");
             System.out.println("0: Exit");
             System.out.print("Entrez votre choix: ");
-            choice = sc.nextInt();
+            choice = sc.nextLine();
 
             switch (choice) {
 
-                case 1:
+                case "1":
                     System.out.print("Entrez l'ISBN du livre: ");
                     String isbn = sc.next();
                     sc.nextLine();
@@ -50,33 +50,33 @@ public class Main {
 
 
 
-                case 2:
+                case "2":
                     System.out.println("\nLivre dans la bibliothèque:\n");
                     library.afficherLivres();
                     break;
 
-                case 3:
+                case "3":
                     library.recherche();
                     break;
 
-                case 4:
+                case "4":
 
 
                     library.mise_A_jour();
                     break;
 
-                case 5:
+                case "5":
                     System.out.print("Entrez l'ISBN du livre à supprimer: ");
                     isbn = sc.next();
                     library.supprimer(isbn);
                     break;
-                case 0:
+                case "0":
                     System.out.println("Sortie... Au revoir !");
                     break;
 
                 default:
                     System.out.println("Choix invalide. Veuillez réessayer.");
             }
-        } while (choice != 0);
+        } while (!choice.equals("0"));
     }
 }

@@ -1,12 +1,12 @@
 public class Book {
     String titre, auteur, isbn;
-    boolean Disponible;
+    boolean disponible;
 
-    public Book(String titre, String auteur, String isbn, boolean Disponible) {
-        this.titre = titre;
+    public Book (String titre, String auteur, String isbn, boolean disponible) {
+        this.titre =   titre;
         this.auteur = auteur;
         this.isbn = isbn;
-        this.Disponible = Disponible;
+        this.disponible = disponible;
     }
 
     public String getTitre() {
@@ -33,12 +33,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public boolean Disponible() {
-        return Disponible;
+    public boolean disponible() {
+        return disponible;
     }
 
     public void setAvailable(boolean available) {
-        Disponible = available;
+        disponible = available;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class Book {
                  "~~ le titre de livre et :" + titre + '\n' +
                  "~~ L'auteur de livre te :" + auteur + '\n' +
                  "~~ L'ISBN de livre et :" + isbn + '\n' +
-                 "~~ est-il disponible: " + Disponible
+                 "~~ est-il disponible: " + disponible
                 ;
     }
 }

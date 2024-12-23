@@ -15,22 +15,22 @@ public class Library {
         }
     }
     public void recherche() {
-        String valSearch;
+        String indexSearch;
         ArrayList<Book> stock = new ArrayList<>();
         System.out.print("Enter title, ISBN, or author to search: ");
 
-        valSearch = sc.nextLine();
+        indexSearch = sc.nextLine();
 
         for (Book book : books) {
-            if (valSearch.equals(book.getTitre()) ||
-                    valSearch.equals(book.getIsbn()) ||
-                    valSearch.equals(book.getAuteur())) {
+            if (indexSearch.equals(book.getTitre()) ||
+                    indexSearch.equals(book.getIsbn()) ||
+                    indexSearch.equals(book.getAuteur())) {
                 stock.add(book);
             }
         }
 
         if (stock.isEmpty()) {
-            System.out.println(valSearch + " not found.");
+            System.out.println(indexSearch + " not found.");
         } else {
             for (Book book : stock) {
                 System.out.println(book);
